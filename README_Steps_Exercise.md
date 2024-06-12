@@ -19,3 +19,11 @@ nel template (all'interno del div): <Main />
 9. Nel created() richiamo la funzione fetchProjects(), cosicché i dati possano essere recuperati quando l'applicativo viene creato
 
 10. Nel template stampo i valori che mi rimanda l'array projects
+
+11. Creo il components: ProjectCard che importo nel Main.vue (in export default)
+
+12. Creo la props, per far comunicare il padre (Main) con il figlio (ProjectCard), in cui dichiaro il type: Object che comunica al padre il tipo di dato che deve ritornare
+
+13. Commento il template predecedente e sostituisco con la ProjectCard, che mi sono importato nello script e come components nell'export default.
+
+14. Applico il ciclo v-for al componente nel template, applicando il v-bind sulla props, assegnandogli come valore l'elemento dell'array

@@ -27,3 +27,13 @@ nel template (all'interno del div): <Main />
 13. Commento il template predecedente e sostituisco con la ProjectCard, che mi sono importato nello script e come components nell'export default.
 
 14. Applico il ciclo v-for al componente nel template, applicando il v-bind sulla props, assegnandogli come valore l'elemento dell'array
+
+15. BONUS: Nel Main.vue, nell'axios.get, dopo l'url, dichiaro params a cui assegno come proprietà la variabile dichiarata nel return di data() [currentPage: 1 (valore di default)]
+    Nella sua arrow function, mi ricavo il valore dell'ultima pagina (last_page) che assegno alla variabile pageNumber: null (perchè la prima pagina non ha niente precedentemente), dichiarata in return di data().
+    Nei methods mi creo una nuova funzione a cui assegno una paramtro "n" [nextPage(n)] che collego alla variabile currentPage dichiarata nel return di data() & mi richiamo la
+    funzione fetchProjects() affinché, al cambio pagina, mi restituisca i nuovi dati
+    Nel template utilizzo la direttiva v-for per ciclare la function nextPage(n) prendendo come singolo elemento "n", e tramite la direttiva on-click (@click) cambio pagina.
+
+16. Nel ProjectCard, graie all'eadger loading nel ProjectController nella repo laravel-api, mi stampo in pagina type & technology.
+    Per Type: se esiste stamparlo, altrimenti --
+    Per Technology, essendo un array, applico la direttiva v-for per ciclarlo e ottenerne il singolo nome della tech associato al progetto

@@ -3,6 +3,12 @@
 
     <ProjectCard v-for="project in projects" :key="project.id" :singleProject="project"/>
 
+    <div class="page">
+        <p @click="nextPage(n)" v-for="n in pageNumber" :key="n">
+            {{ n }}
+        </p>
+    </div>
+
     <!-- <ul>
         <li v-for="project in projects" :key="project.id">
             <h4>
@@ -30,15 +36,27 @@ export default {
   data() {
     return {
       projects: [],
+      currentPage: 1,
+      pageNumber: null
     };
   },
   methods: {
     fetchProjects() {
-      axios.get("http://127.0.0.1:8000/api/projects").then((result) => {
-        // console.log(result.data.projects);
-        this.projects = result.data.projects
+      axios.get("http://127.0.0.1:8000/api/projects",
+        {params:{
+            page: this.currentPage
+        }}
+      ).then((result) => {
+        console.log(result.data.projects.data);
+        this.projects = result.data.projects.data
+        this.pageNumber = result.data.projects.last_page
       });
     },
+
+    nextPage(n){
+        this.currentPage = n
+        this.fetchProjects()
+    }
   },
   created() {
     this.fetchProjects();

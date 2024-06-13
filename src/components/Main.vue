@@ -47,7 +47,7 @@ export default {
             page: this.currentPage
         }}
       ).then((result) => {
-        console.log(result.data.projects.data);
+        // console.log(result.data.projects.data);
         this.projects = result.data.projects.data
         this.pageNumber = result.data.projects.last_page
       });

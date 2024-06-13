@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-30">
+  <div class="mt-30">
     <h2>
       Name Project: 
       <RouterLink :to="{name: 'project.show', params:{slug: singleProject.slug}}">{{ singleProject.name_project }} </RouterLink>

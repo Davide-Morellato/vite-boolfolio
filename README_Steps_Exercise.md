@@ -34,10 +34,12 @@ nel template (all'interno del div): <Main />
     funzione fetchProjects() affinché, al cambio pagina, mi restituisca i nuovi dati
     Nel template utilizzo la direttiva v-for per ciclare la function nextPage(n) prendendo come singolo elemento "n", e tramite la direttiva on-click (@click) cambio pagina.
 
-16. Nel ProjectCard, graie all'eadger loading nel ProjectController nella repo laravel-api, mi stampo in pagina type & technology.
+16. Nel ProjectCard, grazie all'eadger loading nel ProjectController nella repo laravel-api, mi stampo in pagina type & technology.
     Per Type: se esiste stamparlo, altrimenti --
     Per Technology, essendo un array, applico la direttiva v-for per ciclarlo e ottenerne il singolo nome della tech associato al progetto.
 
+
+-- PARTE 2 --
 17. Installo Vue-Router [npm install vue-router@4]
 
 18. In Main.js importo:
@@ -102,4 +104,11 @@ const router = createRouter({
         }
     }
 </script>
+
+25. Ho spostato il codice dal main.js al router.js; esportandomelo (export defaul router) ed importandolo in main.js (import router from './router')
+
+26. BONUS 2: in Laravel-api ho dichiarato una nuova rotta parametrica API, dopo che nel ProjectController ho dichiarato una nuova funzione che mi restiusse il singolo progetto.
+Nell'AppProject ho dichiarato n methods dichiaro una funzione fetchProjects() per effettuare la chiamata axios.get all'url http://127.0.0.1:8000/api/projects/" + this.$route.params.slug (ho contatenato l'oggetto route che contiene i parametri di riferimento) e con then mi recupero i dati che pusho poi nel nell'array vuoto project: [] (dichiarato nel return di data())
+Nel created() richiamo la funzione fetchProjects(), cosicché i dati possano essere recuperati quando l'applicativo viene creato
+Nel template stampo in pagina i valori {{project.proprietà}}
 

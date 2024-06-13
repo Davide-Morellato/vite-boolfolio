@@ -1,15 +1,16 @@
-<script>
-
-</script>
+<script></script>
 
 <template>
-  <h1>Hello App!</h1>
-  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
-  <nav>
-    <RouterLink to="/">Go to Home</RouterLink>
-    <RouterLink to="/portfolio">Go to Portfolio</RouterLink>
-    <RouterLink to="/contact">Go to contact</RouterLink>
-  </nav>
+  <header>
+    <h1>LOGO</h1>
+    <!-- <p><strong>Current route path:</strong> {{ $route.fullPath }}</p> -->
+    <nav>
+      <RouterLink class="p-10" to="/">Go to Home</RouterLink>
+      <RouterLink class="p-10" to="/portfolio">Go to Portfolio</RouterLink>
+      <RouterLink class="p-10" to="/contact">Go to contact</RouterLink>
+    </nav>
+  </header>
+
   <main>
     <RouterView />
   </main>

@@ -16,7 +16,7 @@ import Main from '../Main.vue';
 </script>
 
 <template>
-  <div class="pt-10">
+  <div class="mt-30">
     <h2>{{ message }}</h2>
     <Main />
   </div>

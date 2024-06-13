@@ -1,6 +1,9 @@
 <template>
   <div class="pt-30">
-    <h2>Name Project: {{ singleProject.name_project }}</h2>
+    <h2>
+      Name Project: 
+      <RouterLink :to="{name: 'project.show', params:{slug: singleProject.slug}}">{{ singleProject.name_project }} </RouterLink>
+    </h2>
     <p><strong>Description: </strong>{{ singleProject.description }}</p>
     <p><strong>Link: </strong>{{ singleProject.url_github }}</p>
 
@@ -23,6 +26,8 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
   props: {
     singleProject: {

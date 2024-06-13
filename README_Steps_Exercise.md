@@ -36,4 +36,70 @@ nel template (all'interno del div): <Main />
 
 16. Nel ProjectCard, graie all'eadger loading nel ProjectController nella repo laravel-api, mi stampo in pagina type & technology.
     Per Type: se esiste stamparlo, altrimenti --
-    Per Technology, essendo un array, applico la direttiva v-for per ciclarlo e ottenerne il singolo nome della tech associato al progetto
+    Per Technology, essendo un array, applico la direttiva v-for per ciclarlo e ottenerne il singolo nome della tech associato al progetto.
+
+17. Installo Vue-Router [npm install vue-router@4]
+
+18. In Main.js importo:
+import { createWebHistory, createRouter } from 'vue-router'
+
+import AppHome from './components/pages/AppHome.vue'
+import AppPortfolio from './components/pages/AppPortfolio.vue'
+import AppContact from './components/pages/AppContact.vue'
+
+const routes = [
+  { path: '/', component: AppHome },
+  { path: '/portfolio', component: AppPortfolio },
+  { path: '/contact', component: AppContact },
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
+
+19. Registro il plug-in router in Main.js: createApp(App).use(router).mount('#app')
+
+20. Sposto ciò che ho in App.vue in AppPortfolio.vue (cambiando i vari percorsi), e incollo da Vue-Router:
+<template>
+  <h1>Hello App!</h1>
+  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
+  <nav>
+    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="/portfolio">Go to Portfolio</RouterLink>
+    <RouterLink to="/contact">Go to contact</RouterLink>
+  </nav>
+  <main>
+    <RouterView />
+  </main>
+</template>
+
+21. In AppContact creo un form di compilazione
+
+22. BONUS 1: creo il file AppProject.vue e lo importo, dichiarandone la rotta parametrica, nel Main.js
+23. In ProjectCard inserisco un routerlink (nel Name Project) a cui "aggancio" la rotta parametrica e gli definisco i parametri di indirizzamento:
+<RouterLink :to="{name: 'project.show', params:{slug: singleProject.slug}}">
+24. Nel File AppProject.vue inserisco nel template ciò che voglio visualizzare richiamando la variabile $route che deve contenere la proprietà params con la proprietà slug, ed un bottone che mi permette di tornare indietro a cui assegno una funzione al @click
+<template>
+    <div>
+        <p>
+            {{ $route.params.slug }}
+        </p>
+
+        <button @click="goBack">
+            Back to the Future
+        </button>
+    </div>
+
+</template>
+
+<script>
+    export default {
+        methods:{
+            goBack(){
+                this.$router.back()
+            }
+        }
+    }
+</script>
+

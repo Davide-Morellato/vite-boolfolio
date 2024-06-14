@@ -1,7 +1,7 @@
 <template>
-  <div class="container py-5 mx-auto vh-100 w-fit">
+  <div class="container py-5">
     <div class="row justify-content-center">
-      <div class="card w-50">
+      <div class="card w-50 bor-none">
         <div class="card-body text-center">
           <h4 class="pt-2">
             {{ project.name_project }}
@@ -50,7 +50,10 @@
       </div>
     </div>
     <div class="text-center mt-30">
-      <button @click="goBack">Back to the Future</button>
+      <button class="btn-slice" @click="goBack">
+        <div class="top"><span>BACK TO THE FUTURE</span></div>
+        <div class="bottom"><span>BACK TO THE FUTURE</span></div> 
+      </button>
     </div>
   </div>
 </template>

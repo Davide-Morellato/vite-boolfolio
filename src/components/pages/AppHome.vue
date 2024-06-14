@@ -1,8 +1,6 @@
 <template>
-    <div class="container vh-100">
-        <h1>
-            Welcome 
-        </h1>
+    <div class="container d-flex justify-content-center vh-100">
+        <img class="opacity-25 logo_home" src="/public/logo/welcome.png" alt="welcome">
     </div>
 </template>
 

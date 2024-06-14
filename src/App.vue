@@ -12,9 +12,9 @@
         <!-- <p><strong>Current route path:</strong> {{ $route.fullPath }}</p> -->
         <div class="col-auto">
           <nav class="d-flex text-white fw-light">
-          <RouterLink class="p-10 button left" to="/">Home</RouterLink>
-          <RouterLink class="p-10 button left" to="/portfolio">Portfolio</RouterLink>
-          <RouterLink class="p-10 button left" to="/contact">Contact</RouterLink>
+          <RouterLink class="p-10 button left" to="/"><span>Home</span></RouterLink>
+          <RouterLink class="p-10 button left" to="/portfolio"><span>Portfolio</span></RouterLink>
+          <RouterLink class="p-10 button left" to="/contact"><span>Contact</span></RouterLink>
         </nav>
         </div>
       </div>

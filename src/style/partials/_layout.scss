@@ -15,6 +15,12 @@
   user-select: none;
 }
 
+.button > span {
+    display: block;
+    position: relative;
+    z-index: 999;
+}
+
 .button:before,
 .button:after {
   content: '';
@@ -23,9 +29,8 @@
 }
 
 .button:hover {
-  color: black;
-  transition-delay: 0.1s;
-  z-index: 999;
+  color: rgb(73, 119, 132);
+  transition: 0.8s;
 }
 
 .button:hover:before {

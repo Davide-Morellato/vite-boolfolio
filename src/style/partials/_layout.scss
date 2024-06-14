@@ -12,7 +12,6 @@
   font-size: 18px;
   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
   cursor: pointer;
-  user-select: none;
 }
 
 .button > span {
@@ -31,6 +30,7 @@
 .button:hover {
   color: rgb(73, 119, 132);
   transition: 0.8s;
+  font-weight: 300;
 }
 
 .button:hover:before {
@@ -39,7 +39,7 @@
 
 .button:hover:after {
   background: white;
-  transition-delay: 0.35s;
+  transition-delay: 0.5s;
 }
 
 .left:before,
@@ -65,10 +65,23 @@
   width: 100%;
 }
 
+/**/
+/* MAIN */
+/**/
+.title_proj:hover{
+    cursor: pointer;
+    color: rgb(182, 115, 150);
+}
+
+/**/
+/* NUMBER PAGE */
+/**/
 .page {
-  color: white;
+    background-color: rgb(73, 119, 132);
+    color: rgb(251, 245, 243);
 }
 
 .page:hover {
   cursor: pointer;
+  background-color: rgb(182, 115, 150);
 }

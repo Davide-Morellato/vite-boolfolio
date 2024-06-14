@@ -15,7 +15,7 @@ import Main from '../Main.vue';
 </script>
 
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <Main />
   </div>
 </template>

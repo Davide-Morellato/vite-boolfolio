@@ -5,6 +5,10 @@
     padding: 0 10px;
 }
 
+.pb-20{
+    padding-bottom: 20px;
+}
+
 .pt-30{
     padding-top: 30px;
 }
@@ -28,9 +32,6 @@
 /**/
 /* WIDTH */
 /**/
-.w-fit{
-    width: fit-content;
-}
 
 .w-10px{
     width: 25px;
@@ -44,10 +45,11 @@
 /**/
 /* BACKGROUND */
 /**/
-.bg-petrol{
-    background-color: rgb(73, 119, 132);
+.bg-softpetrol{
+    background-color: rgb(122, 150, 166);
 }
 
 .bg-soft{
-    background-color: rgb(239, 232, 219);
+    background-color: rgb(251, 245, 243);
 }
+

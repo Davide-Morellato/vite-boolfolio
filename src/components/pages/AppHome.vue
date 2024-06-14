@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-30">
+    <div class="container vh-100">
         <h1>
             Welcome 
         </h1>

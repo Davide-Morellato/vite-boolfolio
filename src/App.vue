@@ -1,17 +1,27 @@
 <script></script>
 
 <template>
-  <header>
-    <h1>LOGO</h1>
-    <!-- <p><strong>Current route path:</strong> {{ $route.fullPath }}</p> -->
-    <nav>
-      <RouterLink class="p-10" to="/">Go to Home</RouterLink>
-      <RouterLink class="p-10" to="/portfolio">Go to Portfolio</RouterLink>
-      <RouterLink class="p-10" to="/contact">Go to contact</RouterLink>
-    </nav>
+  <header class="py-4 bg-petrol">
+    <div class="container mx-auto">
+      <div class="row justify-content-between align-items-baseline">
+        <div class="col-auto">
+          <RouterLink class="p-10" to="/">
+            <img class="w-80px logo" src="../logo/fly_logo.png" alt="logo">
+          </RouterLink>
+        </div>
+        <!-- <p><strong>Current route path:</strong> {{ $route.fullPath }}</p> -->
+        <div class="col-auto">
+          <nav class="d-flex text-white fw-light">
+          <RouterLink class="p-10 button left" to="/">Home</RouterLink>
+          <RouterLink class="p-10 button left" to="/portfolio">Portfolio</RouterLink>
+          <RouterLink class="p-10 button left" to="/contact">Contact</RouterLink>
+        </nav>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main>
+  <main class="bg-soft">
     <RouterView />
   </main>
 </template>

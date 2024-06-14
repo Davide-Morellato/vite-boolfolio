@@ -1,22 +1,69 @@
-.p-10{
-    padding: 0 10px;
+/**/
+/* HEADER */
+/**/
+.logo {
+  filter: invert(100%);
 }
 
-.pt-30{
-    padding-top: 30px;
+.button {
+  position: relative;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-size: 18px;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
 }
 
-.mt-30{
-    margin-top: 30px;
+.button:before,
+.button:after {
+  content: '';
+  position: absolute;
+  transition: inherit;
 }
 
-.page{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 30px;
-    justify-content: center;
-    cursor: pointer;
-    color: brown;
-    font-weight: bold;
+.button:hover {
+  color: black;
+  transition-delay: 0.1s;
+  z-index: 999;
+}
+
+.button:hover:before {
+  transition-delay: 0s;
+}
+
+.button:hover:after {
+  background: white;
+  transition-delay: 0.35s;
+}
+
+.left:before,
+.left:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.left:before {
+  right: 0;
+  border: 1px solid white;
+  border-left: 0;
+  border-right: 0;
+}
+
+.left:after {
+  left: 0;
+}
+
+.left:hover:before,
+.left:hover:after {
+  width: 100%;
+}
+
+.page {
+  color: white;
+}
+
+.page:hover {
+  cursor: pointer;
 }

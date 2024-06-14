@@ -1,35 +1,41 @@
 <template>
-  <div class="mt-30">
-    <h2>
-        Name Project: {{ project.name_project }}
-    </h2>
-    <p>
-        <strong>Slug: </strong>{{ $route.params.slug }}
-    </p>
-    <p>
-        <strong>Link: </strong>{{ project.url_github }}
-    </p>
-    <p>
-        <strong>Description: </strong>{{ project.description }}
-    </p>
-    <p v-if="project.type_id">
-        <strong>Type: </strong>{{ project.type.name }}
-    </p>
-    <p v-else><strong>Type: </strong> --</p>
-    <div>
-      <p>
-        <strong>Techs: </strong>
-      </p>
-      <span
-        class="p-10"
-        v-for="tech in project.technologies"
-        :key="tech.id">
-        {{ tech.name }}
-      </span>
+  <div class="container py-5 mx-auto vh-100 w-fit">
+    <div class="row justify-content-center">
+      <div class="card">
+        <div class="card-body text-center">
+          <h4>
+              {{ project.name_project }}
+          </h4>
+          <h6 class="card-subtitle pt-3 text-body-secondary">
+            Slug: {{ project.slug }}
+          </h6>
+          <p class="card-text pt-3">
+            <strong>Link: </strong>{{ project.url_github }}
+          </p>
+          <p>
+              <strong>Description: </strong>{{ project.description }}
+          </p>
+          <p v-if="project.type_id">
+              <strong>Type: </strong>{{ project.type.name }}
+          </p>
+          <p v-else><strong>Type: </strong> --</p>
+          <div>
+            <p>
+              <strong>Techs: </strong>
+            </p>
+            <span
+              class="p-10"
+              v-for="tech in project.technologies"
+              :key="tech.id">
+              {{ tech.name }}
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-    <button class="mt-30" @click="goBack">Back to the Future</button>
+    <div class="text-center mt-30">
+    <button @click="goBack">Back to the Future</button>
+  </div>
   </div>
 </template>
 
@@ -50,7 +56,7 @@ export default {
     fetchProject() {
       axios.get("http://127.0.0.1:8000/api/projects/" + this.$route.params.slug)
         .then((result) => {
-          console.log(result.data.project);
+          // console.log(result.data.project);
           this.project = result.data.project;
         });
     },

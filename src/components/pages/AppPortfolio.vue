@@ -9,15 +9,13 @@ import Main from '../Main.vue';
     },
     data(){
       return{
-        message: 'Lista Progetti:'
       }
     }
   }
 </script>
 
 <template>
-  <div class="mt-30">
-    <h2>{{ message }}</h2>
+  <div class="container">
     <Main />
   </div>
 </template>

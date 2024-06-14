@@ -1,3 +1,28 @@
-ul,li,ol{
+/**/
+/* RESET */
+/**/
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul, li, ol, menu{
     list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+img{ 
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0;
 }

@@ -42,7 +42,7 @@
     </div>
   </header>
 
-  <main class="bg-soft">
+  <main class="bg-soft flex-grow-1">
     <RouterView />
   </main>
 

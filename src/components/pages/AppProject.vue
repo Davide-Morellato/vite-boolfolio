@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-5 vh-100">
+  <div class="container py-5">
     <div class="row justify-content-center">
       <div class="card w-50 bor-none shadow">
         <div class="card-body text-center">

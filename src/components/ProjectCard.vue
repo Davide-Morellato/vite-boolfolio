@@ -1,7 +1,7 @@
 <template>
-  <div class="container pt-5">
+  <div class="container pt-5 fadeInUp-card">
     <div class="row justify-content-center">
-      <div class="card bg-white w-50">
+      <div class="card w-50 bor-none shadow">
         <div class="card-body text-center">
           <h2 class="title_proj pt-2">
             <RouterLink

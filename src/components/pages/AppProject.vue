@@ -1,7 +1,7 @@
 <template>
-  <div class="container py-5">
+  <div class="container py-5 vh-100">
     <div class="row justify-content-center">
-      <div class="card w-50 bor-none">
+      <div class="card w-50 bor-none shadow">
         <div class="card-body text-center">
           <h4 class="pt-2">
             {{ project.name_project }}
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="text-center mt-30">
+    <div class="text-center mt-100">
       <button class="btn-slice" @click="goBack">
         <div class="top"><span>BACK TO THE FUTURE</span></div>
         <div class="bottom"><span>BACK TO THE FUTURE</span></div> 

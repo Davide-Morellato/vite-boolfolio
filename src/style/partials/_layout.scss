@@ -1,9 +1,8 @@
 /**/
 /* FONT */
 /**/
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 /**/
 /* HEADER */
 /**/
@@ -24,14 +23,14 @@
 }
 
 .button > span {
-    display: block;
-    position: relative;
-    z-index: 999;
+  display: block;
+  position: relative;
+  z-index: 999;
 }
 
 .button:before,
 .button:after {
-  content: '';
+  content: "";
   position: absolute;
   transition: inherit;
 }
@@ -77,42 +76,80 @@
 /**/
 /* MAIN */
 /**/
-.logo_home{
+.logo_home {
   filter: invert(60%);
+  width: 1200px;
+  transform: scale(1);
+  animation: pulse 5s linear infinite;
 }
 
-.title_proj:hover{
-    cursor: pointer;
-    color: rgb(182, 115, 150);
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }
 
-/**/
-/* NUMBER PAGE */
-/**/
-.page {
-    background-color: rgb(73, 119, 132);
-    color: rgb(251, 245, 243);
+.fadeIn-img {
+  animation: 5s fadeIn-img;
 }
 
-.page:hover {
-  cursor: pointer;
-  background-color: rgb(182, 115, 150);
+@keyframes fadeIn-img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 
 /**/
 /* CARD */
 /**/
-.bor-none{
+.bor-none {
   border: none !important;
 }
 
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.title_proj:hover {
+  cursor: pointer;
+  color: rgb(182, 115, 150);
+}
+
+.fadeInUp-card {
+  animation: 1.5s fadeInUp-card;
+}
+@keyframes fadeInUp-card {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 /**/
-/* CARD BUTTON */
+/* SINGLE CARD BUTTON */
 /**/
 
 .btn-slice {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   background-color: rgb(251, 245, 243);
   text-transform: uppercase;
   padding: 1.2rem 2.5rem;
@@ -124,59 +161,34 @@
   letter-spacing: 0.3rem;
   position: relative;
 
-  -webkit-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225);
-  -moz-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -o-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
+  transition: all 1000ms cubic-bezier(0.89, -0.17, 0.14, 1.225);
 }
 
-.btn-slice .top  {
+.btn-slice .top {
   position: relative;
-  height: 6px;
+  height: 7px;
   overflow: hidden;
   top: 0;
 
-  -webkit-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040);
+  transition: all 300ms cubic-bezier(1, -0.055, 0.025, 1.04);
 
-  -webkit-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040);
-  
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s;
+  transition-timing-function: cubic-bezier(1, -0.055, 0.025, 1.04);
+
+  transition-delay: 0.35s;
 }
 
-
-.btn-slice .bottom  {
+.btn-slice .bottom {
   position: relative;
-  height: 6px;
+  height: 7px;
   overflow: hidden;
   bottom: 0;
 
-  -webkit-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040);
+  transition: all 300ms cubic-bezier(1, -0.055, 0.025, 1.04);
 
-  -webkit-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040);
-  
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s;
+  transition-timing-function: cubic-bezier(1, -0.055, 0.025, 1.04);
+
+  transition-delay: 0.35s;
 }
-
 
 .btn-slice .bottom span {
   top: -6px;
@@ -186,28 +198,22 @@
 
 .btn-slice:hover .top {
   top: -5px;
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s; 
+  transition-delay: 0.35s;
 }
 
 .btn-slice:hover .bottom {
   bottom: -5px;
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s; 
+  transition-delay: 0.35s;
 }
 
-.btn-slice:hover, .btn-slice:focus, .btn-slice:active {
+.btn-slice:hover,
+.btn-slice:focus,
+.btn-slice:active {
   margin-left: 10px;
 }
 
-.btn-slice:before{
-  content: '';
+.btn-slice:before {
+  content: "";
   height: 1px;
   width: 60px;
   background-color: rgb(182, 115, 150);
@@ -215,17 +221,112 @@
   margin-top: 6px;
   right: -35px;
 
-  -webkit-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -moz-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -o-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225);
+  transition: all 1000ms cubic-bezier(0.89, -0.17, 0.14, 1.225);
 
-  -webkit-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -moz-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -o-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225);
+  transition-timing-function: cubic-bezier(0.89, -0.17, 0.14, 1.225);
 }
 
-.btn-slice:hover:before{
+.btn-slice:hover:before {
   width: 130%;
+}
+
+/**/
+/* NUMBER PAGE */
+/**/
+.page {
+  color: rgb(251, 245, 243);
+}
+
+.page:hover {
+  cursor: pointer;
+  background-color: rgb(182, 115, 150);
+}
+
+/**/
+/* CONTACT */
+/**/
+.contact {
+  font-family: "Indie Flower", cursive;
+  color:  rgb(216, 190, 152);
+}
+
+/**/
+/* SUMIT BUTTON */
+/**/
+.btn-submit {
+  background-color: rgb(251, 245, 243);
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgb(216, 190, 152);
+  transition: all 0.3s;
+  position: relative;
+  border: none !important;
+}
+
+.btn-submit > span {
+  transition: all 0.3s;
+  display: block;
+  position: relative;
+  z-index: 999;
+}
+
+.btn-submit:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(73, 119, 132, 0.5);
+  border-bottom-color: rgba(73, 119, 132, 0.5);
+  transform: scale(0.1, 1);
+}
+
+.btn-submit:hover > span {
+  letter-spacing: 4px;
+  color: rgb(73, 119, 132);
+  transition: 1s linear;
+  font-weight: 400;
+}
+
+.btn-submit:hover:before {
+  opacity: 0.5;
+  transform: scale(1, 1);
+}
+
+.btn-submit:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover:after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+/**/
+/* FOOTER */
+/**/
+
+.credits{
+  color: white;
+  letter-spacing: 2px;
 }

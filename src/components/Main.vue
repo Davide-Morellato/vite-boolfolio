@@ -3,8 +3,8 @@
 
     <ProjectCard v-for="project in projects" :key="project.id" :singleProject="project"/>
 
-    <div class="container pt-30 pb-20 d-flex flex-wrap flex-row justify-content-center gap-30">
-        <p class="page m-0 bg-softpetrol rounded-pill w-10px fw-bold text-center" @click="nextPage(n)" v-for="n in pageNumber" :key="n">
+    <div class="container py-5 d-flex flex-wrap flex-row justify-content-center gap-30">
+        <p :class="n === currentPage ? 'bg-softviolet' : 'bg-softpetrol'" class="page m-0 rounded-pill w-10px fw-bold text-center" @click="nextPage(n)" v-for="n in pageNumber" :key="n">
             {{ n }}
         </p>
     </div>

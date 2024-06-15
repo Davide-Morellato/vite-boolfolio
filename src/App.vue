@@ -24,6 +24,12 @@
   <main class="bg-soft">
     <RouterView />
   </main>
+
+  <footer class="py-4 bg-softpetrol">
+    <div class="credits container d-flex justify-content-center fw-light">
+      <p>© Credits by Davide Morellato &hearts;</p>
+    </div>
+  </footer>
 </template>
 
 <style lang="scss">

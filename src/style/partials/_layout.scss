@@ -3,6 +3,8 @@
 /**/
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 /**/
 /* HEADER */
 /**/
@@ -153,8 +155,8 @@
   }
 }
 
-.fadeIn-img {
-  animation: 5s fadeIn-img;
+.fadeIn-img{
+  animation: 6s fadeIn-img;
 }
 
 @keyframes fadeIn-img {
@@ -303,9 +305,10 @@
 }
 
 /**/
-/* SUMIT BUTTON */
+/* SUBMIT BUTTON */
 /**/
-.btn-submit {
+.btn-submit,
+.btn-back {
   background-color: rgb(251, 245, 243);
   line-height: 50px;
   height: 50px;
@@ -320,14 +323,15 @@
   border: none !important;
 }
 
-.btn-submit > span {
+.btn-submit > span,
+.btn-back > span {
   transition: all 0.3s;
   display: block;
   position: relative;
   z-index: 999;
 }
 
-.btn-submit:before {
+.btn-submit:before{
   content: "";
   position: absolute;
   bottom: 0;
@@ -346,7 +350,8 @@
   transform: scale(0.1, 1);
 }
 
-.btn-submit:hover > span {
+.btn-submit:hover > span,
+.btn-back:hover > span {
   letter-spacing: 4px;
   color: rgb(73, 119, 132);
   transition: 1s linear;
@@ -369,7 +374,8 @@
   transition: all 0.3s;
 }
 
-.btn-submit:hover:after {
+.btn-submit:hover:after
+ {
   opacity: 0;
   transform: scale(0.1, 1);
 }
@@ -382,4 +388,36 @@
   color: white;
   letter-spacing: 2px;
   margin: 0 auto;
+}
+
+
+/**/
+/* NOT FOUND PAGE */
+/**/
+.not_found{
+  width: 1200px;
+  position: relative;
+}
+
+.not_found img{
+  opacity: 0.8;
+}
+
+.btn-back{
+  font-weight: 700;
+  color: rgb(221, 175, 107);
+}
+
+.error_mess{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: rgb(108, 114, 160);
+  font-family: "Shantell Sans", cursive;
+  letter-spacing: 2px;
+}
+
+.error_mess hr{
+  border: 1px solid rgb(163, 169, 212);
 }

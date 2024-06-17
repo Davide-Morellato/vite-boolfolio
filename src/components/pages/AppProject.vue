@@ -78,6 +78,13 @@ export default {
         .then((result) => {
           // console.log(result.data.project);
           this.project = result.data.project;
+        })
+        // inserisco il controllo per la pagina 404
+        .catch((error) => {
+          this.$router.push({
+            name: 'not-found',
+            params: { pathMatch: this.$route.path.substring(1).split('/')},
+          })
         });
     },
   },

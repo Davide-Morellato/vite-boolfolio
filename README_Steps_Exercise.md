@@ -112,3 +112,12 @@ Nell'AppProject ho dichiarato n methods dichiaro una funzione fetchProjects() pe
 Nel created() richiamo la funzione fetchProjects(), cosicché i dati possano essere recuperati quando l'applicativo viene creato
 Nel template stampo in pagina i valori {{project.proprietà}}
 
+27. Ho aggiunto la pagina Not-Found, creando un nuovo file AppNotFound.vue, importandolo poi nel route.js & dichiarando un nuovo percorso nel routes = []
+{ path: '/:pathMatch(.*)*', name:'not-found', component: AppNotFound} <- Questo percorso fa in modo che, qualora non venisse trovato il riferimento, confrontando la porzione di URL, questo indirizzi l'utente verso la pagina 404.
+Per fare ciò invoco dalla chiamata axios il metodo catch() che pusha nell'oggetto router il nome del percorso registrato nel router.js & i parametri su cui deve basarsi:
+.catch((error) => {
+          this.$router.push({
+            name: 'not-found',
+            params: { pathMatch: this.$route.path.substring(1).split('/')},
+          })
+        });

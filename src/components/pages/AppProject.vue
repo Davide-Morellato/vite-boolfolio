@@ -73,6 +73,8 @@ export default {
     },
 
     fetchProject() {
+      // console.log(screen);
+      // console.log(window);
       axios
         .get("http://127.0.0.1:8000/api/projects/" + this.$route.params.slug)
         .then((result) => {

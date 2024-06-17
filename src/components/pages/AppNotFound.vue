@@ -4,7 +4,7 @@
       <img src="/public/logo/leaves.png" alt="not_found_image" />
     </div>
     <div class="error_mess text-center">
-      <h2>ARE YOU LOST?</h2>
+      <h2>ERROR 404</h2>
       <hr />
       <h3>Don't Worry</h3>
       <h5>

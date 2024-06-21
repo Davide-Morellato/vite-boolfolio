@@ -3,7 +3,7 @@
 /**/
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /**/
 /* HEADER */
@@ -92,13 +92,13 @@
   border: none;
 }
 
-.dropbtn:hover{
+.dropbtn:hover {
   color: rgb(11, 60, 73);
   transition: 0.5s;
   cursor: pointer;
 }
 
-.link{
+.link {
   position: relative;
   padding: 10px;
   color: rgb(182, 115, 150);
@@ -108,7 +108,7 @@
 }
 
 .dropdown-content {
-  color:  rgb(234, 185, 210);
+  color: rgb(234, 185, 210);
   display: none;
   padding: 10px;
   position: absolute;
@@ -155,7 +155,7 @@
   }
 }
 
-.fadeIn-img{
+.fadeIn-img {
   animation: 6s fadeIn-img;
 }
 
@@ -179,13 +179,22 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.card-hover {
+  transition: all 1s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: scale(1.1);
+}
+
+
 .title_proj:hover {
   cursor: pointer;
   color: rgb(182, 115, 150);
 }
 
 .fadeInUp-card {
-  animation: 1.5s fadeInUp-card;
+  animation: 5s fadeInUp-card;
 }
 @keyframes fadeInUp-card {
   0% {
@@ -331,7 +340,7 @@
   z-index: 999;
 }
 
-.btn-submit:before{
+.btn-submit:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -374,8 +383,7 @@
   transition: all 0.3s;
 }
 
-.btn-submit:hover:after
- {
+.btn-submit:hover:after {
   opacity: 0;
   transform: scale(0.1, 1);
 }
@@ -390,25 +398,24 @@
   margin: 0 auto;
 }
 
-
 /**/
 /* NOT FOUND PAGE */
 /**/
-.not_found{
+.not_found {
   width: 1200px;
   position: relative;
 }
 
-.not_found img{
+.not_found img {
   opacity: 0.8;
 }
 
-.btn-back{
+.btn-back {
   font-weight: 450;
   color: rgb(221, 175, 107);
 }
 
-.error_mess{
+.error_mess {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -418,6 +425,6 @@
   letter-spacing: 2px;
 }
 
-.error_mess hr{
+.error_mess hr {
   border: 1px solid rgb(163, 169, 212);
 }
